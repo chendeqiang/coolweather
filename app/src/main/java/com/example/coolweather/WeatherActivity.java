@@ -166,7 +166,7 @@ public class WeatherActivity extends AppCompatActivity {
                             editor.apply();
                             showWeatherInfo(weather);
                             Intent intent = new Intent(getApplicationContext(), AutoUpdateService.class);
-                            startActivity(intent);
+                            startService(intent);
                         } else {
                             Toast.makeText(WeatherActivity.this, "获取天气信息失败", Toast.LENGTH_SHORT).show();
                         }
